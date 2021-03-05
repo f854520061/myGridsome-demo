@@ -6,5 +6,35 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-strapi',
+      options: {
+        apiURL: process.env.GRIDSOME_API_URL,
+        queryLimit: 1000, // Defaults to 100
+        contentTypes: ['project-List', 'journal'],
+        singleTypes: ['general'],
+        // Possibility to login with a Strapi user,
+        // when content types are not publicly available (optional).
+        // loginData: {
+        //   identifier: '',
+        //   password: ''
+        // }
+      }
+    }
+  ],
+  templates: {
+    StrapiProjectList: [
+      {
+        path: '/projects/:id',
+        component: './src/templates/Project.vue'
+      }
+    ],
+    StrapiJournal: [
+      {
+        path: '/journals/:id',
+        component: './src/templates/JournalTem.vue'
+      }
+    ]
+  }
 }

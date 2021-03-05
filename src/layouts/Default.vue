@@ -3,8 +3,8 @@
     <header class="header sticky" data-v-7e33895e="">
       <div class="container" data-v-7e33895e="">
         <div class="left" data-v-7e33895e="">
-          <a
-            href="/"
+          <g-link
+            to="/"
             aria-current="page"
             class="home-link active--exact active"
             data-v-7e33895e=""
@@ -13,11 +13,11 @@
               alt="Nichlas W. Andersen"
               class="logo"
               data-v-7e33895e=""
-          /></a>
+          /></g-link>
         </div>
         <nav class="nav right" data-v-7e33895e="">
-          <a href="/journal" class="nav__link" data-v-7e33895e="">Journal</a
-          ><a href="/contact" class="nav__link" data-v-7e33895e="">Say Hi!</a>
+          <g-link to="/journal" class="nav__link" data-v-7e33895e="">Journal</g-link
+          ><g-link to="/contact" class="nav__link" data-v-7e33895e="">Say Hi!</g-link>
         </nav>
       </div>
     </header>
